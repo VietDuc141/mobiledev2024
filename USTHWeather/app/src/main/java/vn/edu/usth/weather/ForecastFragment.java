@@ -1,4 +1,4 @@
-package vn.edu.usth.weatheractivity;
+package vn.edu.usth.weather;
 
 import android.graphics.Color;
 import android.os.Bundle;
