@@ -6,40 +6,46 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class WeatherActivity extends AppCompatActivity {
 
+    private static final String TAG = "WeatherActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.i("Weather", "onCreate called");
         setContentView(R.layout.activity_weather);
+        Log.i(TAG, "onCreate called");
+
+        ForecastFragment forecastFragment = new ForecastFragment();
+
+        getSupportFragmentManager().beginTransaction().add(R.id.main, forecastFragment).commit();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.i("Weather", "onStart called");
+        Log.i(TAG, "onStart called");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i("Weather", "onResume called");
+        Log.i(TAG, "onResume called");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.i("Weather", "onPause called");
+        Log.i(TAG, "onPause called");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.i("Weather", "onStop called");
+        Log.i(TAG, "onStop called");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.i("Weather", "onDestroy called");
+        Log.i(TAG, "onDestroy called");
     }
 }
